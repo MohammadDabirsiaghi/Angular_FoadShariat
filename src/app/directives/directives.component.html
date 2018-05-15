@@ -1,0 +1,18 @@
+<p>
+  directives works!
+</p>
+<button (click)="onButtonClick($event)">ClickMe</button>
+<h3 *ngIf="isButtonClicked">ButtonClicked</h3>
+<hr/>
+<br/>
+ng-template:
+<h3 *ngIf="isButtonClicked;else secondp">ButtonClicked</h3>
+<ng-template #secondp>
+  <p>Button Not Clicked</p>
+</ng-template>
+<hr/>
+ng-style:
+<p [ngStyle]="{backgroundColor:getColor()}">This Is NgStyle Sample</p>
+<p [ngStyle]="{backgroundColor:getColor()}">This Is NgStyle Sample</p>
+<p [ngStyle]="{backgroundColor:getColor()}">This Is NgStyle Sample</p>
+<p [ngStyle]="{backgroundColor:getColor()}">This Is NgStyle Sample</p>

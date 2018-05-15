@@ -10,11 +10,13 @@ import { ViewEncapsulationWithoutComponent } from './view-encapsulation/view-enc
 import { FirstComponentComponent } from './first-component/first-component.component';
 import { SelectorComponentComponent } from './selector-component/selector-component.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 const appRoutes:Routes=[
   {path:'FirstComponent',component:FirstComponentComponent},
     {path:'SelectorComponent',component:SelectorComponentComponent},
     {path:'DataBinding',component:DataBindingComponent},
+    {path:'Directives',component:DirectivesComponent},
   {path:'ViewEncapsulation',component:ViewEncapsulationComponent}
 ];
 @NgModule({
@@ -25,7 +27,8 @@ const appRoutes:Routes=[
     ViewEncapsulationWithoutComponent,
     FirstComponentComponent,
     SelectorComponentComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
