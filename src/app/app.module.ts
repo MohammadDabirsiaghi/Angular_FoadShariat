@@ -6,7 +6,9 @@ import { ViewEncapsulationComponent } from './view-encapsulation/view-encapsulat
 
 import { ViewEncapsulationWithComponent } from './view-encapsulation/view-encapsulation-with/view-encapsulation-with.component';
 import { ViewEncapsulationWithoutComponent } from './view-encapsulation/view-encapsulation-without/view-encapsulation-without.component';
+import { FirstComponentComponent } from './first-component/first-component.component';
 const appRoutes:Routes=[
+  {path:'FirstComponent',component:FirstComponentComponent},
   {path:'ViewEncapsulation',component:ViewEncapsulationComponent}
 ];
 @NgModule({
@@ -14,7 +16,8 @@ const appRoutes:Routes=[
     AppComponent,
     ViewEncapsulationComponent,
     ViewEncapsulationWithComponent,
-    ViewEncapsulationWithoutComponent
+    ViewEncapsulationWithoutComponent,
+    FirstComponentComponent
   ],
   imports: [
     BrowserModule,
