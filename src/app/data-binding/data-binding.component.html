@@ -1,0 +1,23 @@
+<p>
+  data-binding works!
+  <img src="../../assets/databinding.jpg" width="300" />
+</p>
+<p>
+  age:  {{age}}
+<br/>
+name: {{name}}
+<br/>
+getNameFunction: {{getName()}}
+</p>
+<button class="btn btn-primary" [disabled]="!allowClick" (click)="onButtonClick()">Click Me</button>
+<h3>{{btnClick}}</h3>
+{{allowClick}}
+<br/>
+<h2 [innerText]="allowClick"></h2>
+<br/>
+<input type="text" (input)="onInputChange($event)"/>
+<h2>{{lastName}}</h2>
+<hr/>
+Two Way Binding:
+<input type="text" [(ngModel)]="lastName">
+<h2>{{lastName}}</h2>
