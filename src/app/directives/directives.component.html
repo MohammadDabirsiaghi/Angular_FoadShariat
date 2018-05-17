@@ -16,3 +16,13 @@ ng-style:
 <p [ngStyle]="{backgroundColor:getColor()}">This Is NgStyle Sample</p>
 <p [ngStyle]="{backgroundColor:getColor()}">This Is NgStyle Sample</p>
 <p [ngStyle]="{backgroundColor:getColor()}">This Is NgStyle Sample</p>
+<hr/>
+<p [ngStyle]="{backgroundColor:'orange'}" [ngClass]="{greater:colorCode>0.5,bigFont:colorCode<=0.5}">This Is NgClass Sample</p>
+<hr/>
+ngFor:
+<button (click)="btnAddArray($event)">AddToArray</button>
+<ul>
+  <li *ngFor="let hero of tests;let i=index">
+    {{ hero+i }}
+  </li>
+</ul>

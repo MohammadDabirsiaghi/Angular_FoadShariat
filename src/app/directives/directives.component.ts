@@ -22,5 +22,9 @@ export class DirectivesComponent implements OnInit {
   }
   ngOnInit() {
   }
+  btnAddArray(event:Event){
+  this.tests.push('Test');
+}
+  tests=['test1','test2'];
 
 }
