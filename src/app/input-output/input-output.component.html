@@ -1,0 +1,12 @@
+<fieldset style="border: 1px solid Gray;border-radius: 5px;width: 500px;
+margin:0 auto;padding:20px; background-color:#F2F2F2">
+  <legend>Parent Shopping Cart</legend>
+  <h6>To Add Shopping Cart</h6>
+  <ul>
+    <li (click)="addToCart(product)" style="display: inline;text-decoration-style: none;margin: 5px" *ngFor="let product of products">
+    <button class="btn btn-primary">{{product}}</button>
+    </li>
+  </ul>
+  selected product:<span class="badge badge-pill badge-danger">{{childSeelctedProduct}}</span>
+  </fieldset>
+<app-child [selectedProducts1]="selectedProducts" (productClickedParent)="childProductClick($event)" ></app-child>

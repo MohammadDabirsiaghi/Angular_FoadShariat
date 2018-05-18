@@ -1,0 +1,18 @@
+<fieldset style="border: 1px solid Gray;border-radius: 5px;width: 800px;
+margin:0 auto;background-color:#F2F2F2;padding:10px;">
+  <legend>Child Person</legend>
+  click on person
+
+<ul>
+  <li *ngFor="let person of selectedPersons"
+  style="display: inline;text-decoration-style: none;margin: 10px">
+      <button (click)="passToParent(person)"  style="margin: 10px" class="btn btn-danger">
+          name:{{person.name}}
+          <br/>
+          age:{{person.age}}
+          <br/>
+          school:{{person.school}}
+        </button>
+  </li>
+  </ul>
+</fieldset>

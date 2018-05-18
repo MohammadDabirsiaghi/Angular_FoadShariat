@@ -1,0 +1,29 @@
+<fieldset style="border: 1px solid Gray;border-radius: 5px;width: 800px;
+margin:0 auto;padding:20px; background-color:#F2F2F2">
+  <legend>Parent Person List</legend>
+  <h6>Click On One Person</h6>
+  <ul>
+    <li  style="display: inline;text-decoration-style: none;margin: 5px" 
+    *ngFor="let person of persons">
+    <button (click)="addPerson(person)" style="margin: 10px" class="btn btn-primary">
+      name:{{person.name}}
+      <br/>
+      age:{{person.age}}
+      <br/>
+      school:{{person.school}}
+    </button>
+    </li>
+  </ul>
+  <div *ngIf="selectedChildPerson !=null">
+  selected Person::
+  <button  style="margin: 10px" class="btn btn-warning">
+      name:{{selectedChildPerson.name}}
+      <br/>
+      age:{{selectedChildPerson.age}}
+      <br/>
+      school:{{selectedChildPerson.school}}
+    </button>
+  </div>
+  </fieldset>
+  <app-childperson (childPersonClick)="childPersonClick($event)" [selectedPersons]="selectedPersons" ></app-childperson>
+  

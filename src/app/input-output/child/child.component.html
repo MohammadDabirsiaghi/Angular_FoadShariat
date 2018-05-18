@@ -1,0 +1,12 @@
+<fieldset style="border: 1px solid Gray;border-radius: 5px;width: 500px;
+margin:0 auto;background-color:#F2F2F2;padding:20px;">
+  <legend>Child Shopping Cart</legend>
+  click on product
+  <ul>
+    <li  style="display: inline;text-decoration-style: none;margin: 10px" 
+    *ngFor="let product of selectedProducts">
+    <button (click)="productClicked(product)" style="margin:10px" class="btn btn-success">{{product}}</button>
+    </li>
+  </ul>
+</fieldset>
+

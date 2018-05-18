@@ -11,12 +11,19 @@ import { FirstComponentComponent } from './first-component/first-component.compo
 import { SelectorComponentComponent } from './selector-component/selector-component.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { InputOutputComponent } from './input-output/input-output.component';
+import { ChildComponent } from './Input-Output/child/child.component';
+import { EventEmitterWithObjectComponent } from './event-emitter-with-object/event-emitter-with-object.component';
+import { ChildpersonComponent } from './event-emitter-with-object/childperson/childperson.component';
 
 const appRoutes:Routes=[
   {path:'FirstComponent',component:FirstComponentComponent},
     {path:'SelectorComponent',component:SelectorComponentComponent},
     {path:'DataBinding',component:DataBindingComponent},
     {path:'Directives',component:DirectivesComponent},
+    {path:'InputOutput',component:InputOutputComponent},
+    {path:'EventEmitterWithObject',component:EventEmitterWithObjectComponent},
+    
   {path:'ViewEncapsulation',component:ViewEncapsulationComponent}
 ];
 @NgModule({
@@ -28,7 +35,11 @@ const appRoutes:Routes=[
     FirstComponentComponent,
     SelectorComponentComponent,
     DataBindingComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    InputOutputComponent,
+    ChildComponent,
+    EventEmitterWithObjectComponent,
+    ChildpersonComponent
   ],
   imports: [
     BrowserModule,
