@@ -15,6 +15,7 @@ import { InputOutputComponent } from './input-output/input-output.component';
 import { ChildComponent } from './Input-Output/child/child.component';
 import { EventEmitterWithObjectComponent } from './event-emitter-with-object/event-emitter-with-object.component';
 import { ChildpersonComponent } from './event-emitter-with-object/childperson/childperson.component';
+import { AccessElementComponent } from './access-element/access-element.component';
 
 const appRoutes:Routes=[
   {path:'FirstComponent',component:FirstComponentComponent},
@@ -24,7 +25,8 @@ const appRoutes:Routes=[
     {path:'InputOutput',component:InputOutputComponent},
     {path:'EventEmitterWithObject',component:EventEmitterWithObjectComponent},
     
-  {path:'ViewEncapsulation',component:ViewEncapsulationComponent}
+  {path:'ViewEncapsulation',component:ViewEncapsulationComponent},
+  {path:'AccessElement',component:AccessElementComponent}
 ];
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ const appRoutes:Routes=[
     InputOutputComponent,
     ChildComponent,
     EventEmitterWithObjectComponent,
-    ChildpersonComponent
+    ChildpersonComponent,
+    AccessElementComponent
   ],
   imports: [
     BrowserModule,
