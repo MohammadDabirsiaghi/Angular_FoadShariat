@@ -16,6 +16,7 @@ import { ChildComponent } from './Input-Output/child/child.component';
 import { EventEmitterWithObjectComponent } from './event-emitter-with-object/event-emitter-with-object.component';
 import { ChildpersonComponent } from './event-emitter-with-object/childperson/childperson.component';
 import { AccessElementComponent } from './access-element/access-element.component';
+import { NgContentDirectiveComponent } from './access-element/ng-content-directive/ng-content-directive.component';
 
 const appRoutes:Routes=[
   {path:'FirstComponent',component:FirstComponentComponent},
@@ -42,7 +43,8 @@ const appRoutes:Routes=[
     ChildComponent,
     EventEmitterWithObjectComponent,
     ChildpersonComponent,
-    AccessElementComponent
+    AccessElementComponent,
+    NgContentDirectiveComponent
   ],
   imports: [
     BrowserModule,
