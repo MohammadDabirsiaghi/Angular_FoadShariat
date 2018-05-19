@@ -11,7 +11,7 @@ export class CommentSampleComponent implements OnInit {
   comments:IComment[]=[];
   ratings:number[]=[2,2.5,3.4,4.5];
   constructor() { }
-
+  
   ngOnInit() {
   }
   AddRate(event:KeyboardEvent,id :number){
