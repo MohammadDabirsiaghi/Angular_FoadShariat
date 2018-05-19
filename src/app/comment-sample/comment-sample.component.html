@@ -1,0 +1,18 @@
+
+comment:
+<textarea #txtComment></textarea><button (click)="AddComment(txtComment)" class="btn btn-success">Add</button>
+
+<div class="card" *ngFor="let comment of comments;let i=index">
+    <img class="card-img-top" src="holder.js/100x180/" alt="">
+    <div class="card-body">
+            id:{{comment.id}}
+        <h4 class="card-title">Comment:{{comment.comment}}</h4>
+        <app-star-rating  [rating]="comment.rating"></app-star-rating>
+        <input type="number" value="5" (keydown)="AddRate($event,comment.id)">
+        <br/>
+       Agree:{{comment.agree}} <span (click)="like(comment.id)" class="fa fa-hand-o-up" aria-hidden="true"></span>
+        <br/>
+        disAgree:{{comment.disagree}} <span (click)="dislike(comment.id)" class="fa fa-hand-o-down" aria-hidden="true"></span>
+    </div>
+</div>
+

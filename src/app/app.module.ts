@@ -17,6 +17,9 @@ import { EventEmitterWithObjectComponent } from './event-emitter-with-object/eve
 import { ChildpersonComponent } from './event-emitter-with-object/childperson/childperson.component';
 import { AccessElementComponent } from './access-element/access-element.component';
 import { NgContentDirectiveComponent } from './access-element/ng-content-directive/ng-content-directive.component';
+import { CommentSampleComponent } from './comment-sample/comment-sample.component';
+
+import { StarRatingComponent } from './comment-sample/star-rating/star-rating.component';
 
 const appRoutes:Routes=[
   {path:'FirstComponent',component:FirstComponentComponent},
@@ -27,7 +30,8 @@ const appRoutes:Routes=[
     {path:'EventEmitterWithObject',component:EventEmitterWithObjectComponent},
     
   {path:'ViewEncapsulation',component:ViewEncapsulationComponent},
-  {path:'AccessElement',component:AccessElementComponent}
+  {path:'AccessElement',component:AccessElementComponent},
+  {path:'CommentSample',component:CommentSampleComponent}
 ];
 @NgModule({
   declarations: [
@@ -44,7 +48,9 @@ const appRoutes:Routes=[
     EventEmitterWithObjectComponent,
     ChildpersonComponent,
     AccessElementComponent,
-    NgContentDirectiveComponent
+    NgContentDirectiveComponent,
+    CommentSampleComponent,
+    StarRatingComponent
   ],
   imports: [
     BrowserModule,
