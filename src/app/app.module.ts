@@ -20,7 +20,17 @@ import { NgContentDirectiveComponent } from './access-element/ng-content-directi
 import { CommentSampleComponent } from './comment-sample/comment-sample.component';
 
 import { StarRatingComponent } from './comment-sample/star-rating/star-rating.component';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { ChildLifeCycleComponent } from './life-cycle/child-life-cycle/child-life-cycle.component';
+import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
+import { BasicHighlightDirective } from './custom-directive/basic-highlight.directive';
+import { AdvanceHightlightDirective } from './custom-directive/advance-hightlight.directive';
+import { StructuralDirectiveComponent } from './structural-directive/structural-directive.component';
+import { UnlessDirective } from './Structural-Directive/unless.directive';
+import { ServicePart1Component } from './service-part1/service-part1.component';
+import { AddAccountComponent } from './Service-Part1/add-account/add-account.component';
 
+import { AccountsService } from './Service-Part1/accounts.service';
 const appRoutes:Routes=[
   {path:'FirstComponent',component:FirstComponentComponent},
     {path:'SelectorComponent',component:SelectorComponentComponent},
@@ -31,7 +41,11 @@ const appRoutes:Routes=[
     
   {path:'ViewEncapsulation',component:ViewEncapsulationComponent},
   {path:'AccessElement',component:AccessElementComponent},
-  {path:'CommentSample',component:CommentSampleComponent}
+  {path:'CommentSample',component:CommentSampleComponent},
+  {path:'LifeCycle',component:LifeCycleComponent},
+  {path:'CustomDirective',component:CustomDirectiveComponent},
+  {path:'StructuralDirective',component:StructuralDirectiveComponent},
+  {path:'ServicePart1',component:ServicePart1Component}
 ];
 @NgModule({
   declarations: [
@@ -50,7 +64,16 @@ const appRoutes:Routes=[
     AccessElementComponent,
     NgContentDirectiveComponent,
     CommentSampleComponent,
-    StarRatingComponent
+    StarRatingComponent,
+    LifeCycleComponent,
+    ChildLifeCycleComponent,
+    CustomDirectiveComponent,
+    BasicHighlightDirective,
+    AdvanceHightlightDirective,
+    StructuralDirectiveComponent,
+    UnlessDirective,
+    ServicePart1Component,
+    AddAccountComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +83,7 @@ const appRoutes:Routes=[
   exports: [
     RouterModule
   ],
-  providers: [],
+  providers: [AccountsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

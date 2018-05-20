@@ -1,0 +1,37 @@
+<button (click)="Toggle()">Toggle</button>
+<p>absent:{{absent}}</p>
+<div *ngIf="absent">
+ <ul>
+   <li *ngFor="let n of names">
+    {{n}}
+   </li>
+ </ul>
+  </div>
+<ng-template [ngIf]="absent">
+    <ul>
+        <li *ngFor="let n of names">
+         {{n}}
+        </li>
+      </ul>
+</ng-template>
+
+<div *appUnless="absent" style="border:1px solid Red">
+    <ul>
+        <li *ngFor="let n of names">
+         {{n}}
+        </li>
+      </ul>
+</div>
+<div>
+  <span [ngSwitch]="score">
+  <p *ngSwitchCase="100">
+  score is 100
+  </p>
+  <p *ngSwitchCase="200">
+    score is 200
+  </p>
+  <p *ngSwitchDefault>
+    score is not  100 or 200
+  </p>
+  </span>
+</div>
